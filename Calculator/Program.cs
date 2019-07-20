@@ -34,7 +34,7 @@ namespace Calculator
                         break;
                     case 4:
                         Console.WriteLine("Wybrałeś Dzielenie");
-                        int wynikDzielenia = klasa.dzielenie();
+                        string wynikDzielenia = klasa.dzielenie().ToString();
                         Console.WriteLine(wynikDzielenia);
                         break;
                     case 5:
