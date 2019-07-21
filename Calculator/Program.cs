@@ -18,7 +18,7 @@ namespace Calculator
                 switch (dzialanie)
                 {
                     case 1:
-                        Console.WriteLine("Wybrałeś Dodawanie. Wprowadz dwie liczby.");
+                        Console.WriteLine("Wybrałffeś Dodawanie. Wprowadz dwie liczby.");
                         int wynikDodawania = klasa.dodawanie();
                         Console.WriteLine(wynikDodawania);
                         break;
