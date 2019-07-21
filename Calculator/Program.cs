@@ -38,7 +38,7 @@ namespace Calculator
                         case 4:
                             Console.WriteLine("Wybrałeś Dzielenie");
                             float wynikDzielenia = klasa.dzielenie();
-                            if (wynikDzielenia != 0)
+                            if (wynikDzielenia != 9999999999)
                             {
                                 Console.WriteLine(wynikDzielenia);
                             }

@@ -42,7 +42,7 @@ namespace Calculator
             }
             else
             {
-                float zero = 0;
+                float zero = 9999999999;
                 return zero;
             }
         }
