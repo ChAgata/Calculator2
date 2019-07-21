@@ -31,17 +31,20 @@ namespace Calculator
             int wynik = x * y;
             return wynik;
         }
-        public string dzielenie()
+        public float dzielenie()
         {
             x = Int32.Parse(Console.ReadLine());
             y = Int32.Parse(Console.ReadLine());
             if (y != 0)
             {
-                int wynik = x / y;
-                return wynik.ToString();
+                float wynik = x / y;
+                return wynik;
             }
-            string error = "Nie dziel przez 0!!!";
-            return error;
+            else
+            {
+                float zero = 0;
+                return zero;
+            }
         }
         public int dzielenieModulo()
         {

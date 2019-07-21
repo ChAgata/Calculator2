@@ -37,8 +37,15 @@ namespace Calculator
                             break;
                         case 4:
                             Console.WriteLine("Wybrałeś Dzielenie");
-                            string wynikDzielenia = klasa.dzielenie().ToString();
-                            Console.WriteLine(wynikDzielenia);
+                            float wynikDzielenia = klasa.dzielenie();
+                            if (wynikDzielenia != 0)
+                            {
+                                Console.WriteLine(wynikDzielenia);
+                            }
+                            else
+                            {
+                                Console.WriteLine("Nie dziel przez 0!");
+                            }
                             break;
                         case 5:
                             Console.WriteLine("Wybrałeś Dzielenie Modulo");
@@ -52,7 +59,6 @@ namespace Calculator
                             break;
                     }
                     Console.ReadLine();
-
                 }
                 catch (FormatException e)
                 {
