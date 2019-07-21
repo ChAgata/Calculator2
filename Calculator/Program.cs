@@ -10,52 +10,65 @@ namespace Calculator
     {
         static void Main(string[] args)
         {
-            
+
             do
             {
-                int dzialanie = Menu();
-                Dzialania klasa = new Dzialania();
-                switch (dzialanie)
+                try
                 {
-                    case 1:
-                        Console.WriteLine("Wybrałeś Dodawanie. Wprowadddz dwie liczby.");
-                        int wynikDodawania = klasa.dodawanie();
-                        Console.WriteLine(wynikDodawania);
-                        break;
-                    case 2:
-                        Console.WriteLine("Wybrałeś Odejmowanie Wprowadz dwie liczby.");
-                        int wynikOdejmowania = klasa.odejmowanie();
-                        Console.WriteLine(wynikOdejmowania);
-                        break;
-                    case 3:
-                        Console.WriteLine("Wybrałeś Mnożenie");
-                        int wynikMnozenia = klasa.mnozenie();
-                        Console.WriteLine(wynikMnozenia);
-                        break;
-                    case 4:
-                        Console.WriteLine("Wybrałeś Dzielenie");
-                        string wynikDzielenia = klasa.dzielenie().ToString();
-                        Console.WriteLine(wynikDzielenia);
-                        break;
-                    case 5:
-                        Console.WriteLine("Wybrałeś Dzielenie Modulo");
-                        int wynikModulo = klasa.dzielenieModulo();
-                        Console.WriteLine(wynikModulo);
-                        break;
-                    default:
-                        Console.WriteLine("Wybrałeś numer spoza zakresu. Wybierz jeszcze raz.");
-                        break;
-                }               
-                Console.ReadLine();
+                    string wybor = Menu();
+                    int dzialanie = Int32.Parse(wybor);
+                    Dzialania klasa = new Dzialania();
+                    switch (Int32.Parse(wybor))
+                    {
+                        case 1:
+                            Console.WriteLine("Wybrałeś Dodawanie. Wprowadddz dwie liczby.");
+                            int wynikDodawania = klasa.dodawanie();
+                            Console.WriteLine(wynikDodawania);
+                            break;
+                        case 2:
+                            Console.WriteLine("Wybrałeś Odejmowanie Wprowadz dwie liczby.");
+                            int wynikOdejmowania = klasa.odejmowanie();
+                            Console.WriteLine(wynikOdejmowania);
+                            break;
+                        case 3:
+                            Console.WriteLine("Wybrałeś Mnożenie");
+                            int wynikMnozenia = klasa.mnozenie();
+                            Console.WriteLine(wynikMnozenia);
+                            break;
+                        case 4:
+                            Console.WriteLine("Wybrałeś Dzielenie");
+                            string wynikDzielenia = klasa.dzielenie().ToString();
+                            Console.WriteLine(wynikDzielenia);
+                            break;
+                        case 5:
+                            Console.WriteLine("Wybrałeś Dzielenie Modulo");
+                            int wynikModulo = klasa.dzielenieModulo();
+                            Console.WriteLine(wynikModulo);
+                            break;
+                        case 0:
+                            return;
+                        default:
+                            Console.WriteLine("Wybrałeś numer spoza zakresu. Wybierz jeszcze raz.");
+                            break;
+                    }
+                    Console.ReadLine();
+
+                }
+                catch (FormatException e)
+                {
+                    Console.WriteLine("Podaj odpowiednią liczbę!");
+                    Console.ReadLine();
+                }
             }
-            while (true);  
+            while (true);
+            
         }
-        private static int Menu()
+        private static string Menu()
         {
             Console.Clear();
-            Console.WriteLine("Wybierz numer działania:\n 1. Dodawanie \n 2. Odejmowanie \n 3. Mnożenie \n 4. Dzielenie \n 5. Modulo");
-            int dzialanie = Int32.Parse(Console.ReadLine());
-            return dzialanie;
+            Console.WriteLine("Wybierz numer działania:\n 1. Dodawanie \n 2. Odejmowanie \n 3. Mnożenie \n 4. Dzielenie \n 5. Modulo \n 0. Wyjście");
+                string dzialanie = Console.ReadLine();
+                return dzialanie;
         }
     }
 }
