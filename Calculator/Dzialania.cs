@@ -8,33 +8,26 @@ namespace Calculator
 {
     public class Dzialania
     {
-        public int x;
-        public int y;
+
         public int dodawanie()
         {
-            x = Int32.Parse(Console.ReadLine());
-            y = Int32.Parse(Console.ReadLine());
+
             int wynik = x + y;
             return wynik;
         }
         public int odejmowanie()
         {
-            x = Int32.Parse(Console.ReadLine());
-            y = Int32.Parse(Console.ReadLine());
+
             int wynik = x - y;
             return wynik;
         }
         public int mnozenie()
         {
-            x = Int32.Parse(Console.ReadLine());
-            y = Int32.Parse(Console.ReadLine());
             int wynik = x * y;
             return wynik;
         }
         public float dzielenie()
         {
-            x = Int32.Parse(Console.ReadLine());
-            y = Int32.Parse(Console.ReadLine());
             if (y != 0)
             {
                 float wynik = x / y;
@@ -48,10 +41,21 @@ namespace Calculator
         }
         public int dzielenieModulo()
         {
-            x = Int32.Parse(Console.ReadLine());
-            y = Int32.Parse(Console.ReadLine());
             int wynik = x % y;
             return wynik;
         }
+        public void Values()
+        {
+            Value values = new Value();
+            values.x = int.Parse(Console.ReadLine());
+            values.y = int.Parse(Console.ReadLine());
+            
+        }
+    }
+    public class Value
+    {
+        public int x;
+        public int y;
+
     }
 }

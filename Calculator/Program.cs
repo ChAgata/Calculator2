@@ -15,10 +15,9 @@ namespace Calculator
             {
                 try
                 {
-                    string wybor = Menu();
-                    int dzialanie = Int32.Parse(wybor);
+                    int wybor = int.Parse(Menu());
                     Dzialania klasa = new Dzialania();
-                    switch (Int32.Parse(wybor))
+                    switch (wybor)
                     {
                         case 1:
                             Console.WriteLine("Wybrałeś Dodawanie. Wprowadddz dwie liczby.");
@@ -26,17 +25,17 @@ namespace Calculator
                             Console.WriteLine(wynikDodawania);
                             break;
                         case 2:
-                            Console.WriteLine("Wybrałeś Odejmowanie Wprowadz dwie liczby.");
+                            Console.WriteLine("Wybrałeś Odejmowanie. Wprowadddz dwie liczby.");
                             int wynikOdejmowania = klasa.odejmowanie();
                             Console.WriteLine(wynikOdejmowania);
                             break;
                         case 3:
-                            Console.WriteLine("Wybrałeś Mnożenie");
+                            Console.WriteLine("Wybrałeś Mnożenie. Wprowadddz dwie liczby.");
                             int wynikMnozenia = klasa.mnozenie();
                             Console.WriteLine(wynikMnozenia);
                             break;
                         case 4:
-                            Console.WriteLine("Wybrałeś Dzielenie");
+                            Console.WriteLine("Wybrałeś Dzielenie. Wprowadddz dwie liczby.");
                             float wynikDzielenia = klasa.dzielenie();
                             if (wynikDzielenia != 9999999999)
                             {
@@ -48,11 +47,12 @@ namespace Calculator
                             }
                             break;
                         case 5:
-                            Console.WriteLine("Wybrałeś Dzielenie Modulo");
+                            Console.WriteLine("Wybrałeś Dzielenie Modulo. Wprowadddz dwie liczby.");
                             int wynikModulo = klasa.dzielenieModulo();
                             Console.WriteLine(wynikModulo);
                             break;
                         case 0:
+                            Console.Clear();
                             return;
                         default:
                             Console.WriteLine("Wybrałeś numer spoza zakresu. Wybierz jeszcze raz.");
