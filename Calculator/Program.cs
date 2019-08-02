@@ -36,14 +36,15 @@ namespace Calculator
                             break;
                         case 4:
                             Console.WriteLine("Wybrałeś Dzielenie. Wprowadddz dwie liczby.");
-                            float wynikDzielenia = klasa.Dzielenie();
-                            if (wynikDzielenia != 9999999999)
+
+                            try
                             {
+                                float wynikDzielenia = klasa.Dzielenie();
                                 Console.WriteLine(wynikDzielenia);
                             }
-                            else
+                            catch (DivideByZeroException e)
                             {
-                                Console.WriteLine("Nie dziel przez 0!");
+                                Console.WriteLine(e.Message);
                             }
                             break;
                         case 5:

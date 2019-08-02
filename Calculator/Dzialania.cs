@@ -30,16 +30,12 @@ namespace Calculator
         public float Dzielenie()
         {
             Value values = Values();
-            if (values.y != 0)
+            float l = values.y;
+            if (l == 0)
             {
-                float wynik = values.x / values.y;
-                return wynik;
+                throw new DivideByZeroException("Nie dziel przez o!");
             }
-            else
-            {                
-                float zero = 9999999999;
-                return zero;
-            }
+            return values.x / values.y;
         }
         public int DzielenieModulo()
         {
