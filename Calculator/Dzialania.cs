@@ -9,25 +9,25 @@ namespace Calculator
     public class Dzialania
     {
         
-        public int dodawanie()
+        public int Dodawanie()
         {
             Value values = Values();
             int wynik = values.x + values.y;
             return wynik;
         }
-        public int odejmowanie()
+        public int Odejmowanie()
         {
             Value values = Values();
             int wynik = values.x - values.y;
             return wynik;
         }
-        public int mnozenie()
+        public int Mnozenie()
         {
             Value values = Values();
             int wynik = values.x * values.y;
             return wynik;
         }
-        public float dzielenie()
+        public float Dzielenie()
         {
             Value values = Values();
             if (values.y != 0)
@@ -41,7 +41,7 @@ namespace Calculator
                 return zero;
             }
         }
-        public int dzielenieModulo()
+        public int DzielenieModulo()
         {
             Value values = Values();
             int wynik = values.x % values.y;

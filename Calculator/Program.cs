@@ -21,22 +21,22 @@ namespace Calculator
                     {
                         case 1:
                             Console.WriteLine("Wybrałeś Dodawanie. Wprowadddz dwie liczby.");
-                            int wynikDodawania = klasa.dodawanie();
+                            int wynikDodawania = klasa.Dodawanie();
                             Console.WriteLine(wynikDodawania);
                             break;
                         case 2:
                             Console.WriteLine("Wybrałeś Odejmowanie. Wprowadddz dwie liczby.");
-                            int wynikOdejmowania = klasa.odejmowanie();
+                            int wynikOdejmowania = klasa.Odejmowanie();
                             Console.WriteLine(wynikOdejmowania);
                             break;
                         case 3:
                             Console.WriteLine("Wybrałeś Mnożenie. Wprowadddz dwie liczby.");
-                            int wynikMnozenia = klasa.mnozenie();
+                            int wynikMnozenia = klasa.Mnozenie();
                             Console.WriteLine(wynikMnozenia);
                             break;
                         case 4:
                             Console.WriteLine("Wybrałeś Dzielenie. Wprowadddz dwie liczby.");
-                            float wynikDzielenia = klasa.dzielenie();
+                            float wynikDzielenia = klasa.Dzielenie();
                             if (wynikDzielenia != 9999999999)
                             {
                                 Console.WriteLine(wynikDzielenia);
@@ -48,7 +48,7 @@ namespace Calculator
                             break;
                         case 5:
                             Console.WriteLine("Wybrałeś Dzielenie Modulo. Wprowadddz dwie liczby.");
-                            int wynikModulo = klasa.dzielenieModulo();
+                            int wynikModulo = klasa.DzielenieModulo();
                             Console.WriteLine(wynikModulo);
                             break;
                         case 0:
