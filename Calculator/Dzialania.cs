@@ -36,7 +36,7 @@ namespace Calculator
                 return wynik;
             }
             else
-            {
+            {                
                 float zero = 9999999999;
                 return zero;
             }
