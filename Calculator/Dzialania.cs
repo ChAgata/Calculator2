@@ -8,29 +8,31 @@ namespace Calculator
 {
     public class Dzialania
     {
-
+        
         public int dodawanie()
         {
-
-            int wynik = x + y;
+            Value values = Values();
+            int wynik = values.x + values.y;
             return wynik;
         }
         public int odejmowanie()
         {
-
-            int wynik = x - y;
+            Value values = Values();
+            int wynik = values.x - values.y;
             return wynik;
         }
         public int mnozenie()
         {
-            int wynik = x * y;
+            Value values = Values();
+            int wynik = values.x * values.y;
             return wynik;
         }
         public float dzielenie()
         {
-            if (y != 0)
+            Value values = Values();
+            if (values.y != 0)
             {
-                float wynik = x / y;
+                float wynik = values.x / values.y;
                 return wynik;
             }
             else
@@ -41,21 +43,23 @@ namespace Calculator
         }
         public int dzielenieModulo()
         {
-            int wynik = x % y;
+            Value values = Values();
+            int wynik = values.x % values.y;
             return wynik;
         }
-        public void Values()
+        public Value Values()
         {
             Value values = new Value();
             values.x = int.Parse(Console.ReadLine());
             values.y = int.Parse(Console.ReadLine());
-            
+            return values;
+
         }
     }
     public class Value
     {
         public int x;
         public int y;
-
+        
     }
 }
